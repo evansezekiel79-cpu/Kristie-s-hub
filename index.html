@@ -1,16 +1,194 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Kristie's Hub</title>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<body>
+  <title>Kristie's Hub | Nigerian Thrift Store</title>
 
-<h1>Kristie's Hub</h1>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<p>Welcome to Kristie's Hub!</p>
+    html {
+      scroll-behavior: smooth;
+    }
 
-<p>Nigerian Thrift Wear • Fashion • Accessories</p>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff;
+      color: #171717;
+      line-height: 1.6;
+    }
 
-</body>
-</html>
+    a {
+      text-decoration: none;
+    }
+
+    /* HEADER */
+    header {
+      background: #111;
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: #ff4f9a;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      color: white;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #ff4f9a;
+    }
+
+    /* HERO */
+    .hero {
+      background:
+        radial-gradient(circle at top right, #ff4f9a55, transparent 35%),
+        linear-gradient(135deg, #111, #351927);
+      color: white;
+      padding: 100px 7%;
+      text-align: center;
+    }
+
+    .hero small {
+      color: #ff72ad;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      line-height: 1.1;
+      margin: 15px auto;
+      max-width: 800px;
+    }
+
+    .hero h1 span {
+      color: #ff4f9a;
+    }
+
+    .hero p {
+      color: #ddd;
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 13px 25px;
+      background: #ff4f9a;
+      color: white;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    /* GENERAL */
+    section {
+      padding: 75px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title small {
+      color: #ff4f9a;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      margin-top: 8px;
+    }
+
+    /* CATEGORY GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 6px 25px #00000012;
+      border: 1px solid #eeeeee;
+    }
+
+    .card-image {
+      height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+      background: linear-gradient(135deg, #ffe1ed, #f5eaf0);
+    }
+
+    .card-content {
+      padding: 22px;
+    }
+
+    .card-content h3 {
+      margin-bottom: 7px;
+      font-size: 20px;
+    }
+
+    .card-content p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* THRIFT */
+    .thrift {
+      background: #111;
+      color: white;
+    }
+
+    .thrift .section-title h2 {
+      color: white;
+    }
+
+    .thrift .card {
+      color: #222;
+    }
+
+    /* PRODUCT SECTION */
+    .products {
+      background: #f7f3f5;
+    }
+
+    .product-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 5
