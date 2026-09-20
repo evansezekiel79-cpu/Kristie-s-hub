@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kristie's Hub | Fashion & Thrift Wear</title>
+<title>Kristie's Hub | Nigerian Thrift & Fashion Store</title>
+
+<meta name="description"
+content="Kristie's Hub - Quality Nigerian thrift wear, fairly used clothing, accessories, nails and hair styling.">
 
 <style>
 
@@ -21,10 +24,23 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #fff;
-  color: #171717;
+  color: #151515;
+  line-height: 1.6;
 }
 
-/* HEADER */
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
 
 header {
   background: #111;
@@ -50,13 +66,13 @@ header {
 
 nav {
   display: flex;
-  gap: 25px;
+  gap: 22px;
 }
 
 nav a {
   color: white;
-  text-decoration: none;
   font-size: 14px;
+  transition: 0.3s;
 }
 
 nav a:hover {
@@ -64,32 +80,34 @@ nav a:hover {
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
-  min-height: 82vh;
+  min-height: 85vh;
   padding: 70px 7%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  gap: 55px;
   align-items: center;
-  background: #f7f7f7;
+  background: #f8f8f8;
 }
 
 .hero-text {
   max-width: 600px;
 }
 
-.small-text {
+.small-title {
   color: #ff4f9a;
+  font-size: 13px;
   font-weight: bold;
   letter-spacing: 2px;
-  font-size: 13px;
 }
 
 .hero h1 {
   font-size: 62px;
-  line-height: 1;
+  line-height: 1.03;
   margin: 18px 0;
 }
 
@@ -97,20 +115,19 @@ nav a:hover {
   color: #ff4f9a;
 }
 
-.hero p {
+.hero-text p {
   color: #666;
   font-size: 17px;
-  line-height: 1.8;
+  max-width: 540px;
 }
 
 .hero-image {
   height: 560px;
-  border-radius: 22px;
   overflow: hidden;
+  border-radius: 25px;
 }
 
 .hero-image img {
-  width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -121,13 +138,19 @@ nav a:hover {
   color: white;
   padding: 14px 27px;
   border-radius: 30px;
-  text-decoration: none;
   font-weight: bold;
-  margin-top: 25px;
+  margin-top: 23px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
 }
 
 
-/* SECTION */
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 .section {
   padding: 90px 7%;
@@ -146,11 +169,14 @@ nav a:hover {
 
 .section-title h2 {
   font-size: 40px;
+  line-height: 1.2;
   margin-top: 8px;
 }
 
 
-/* CATEGORIES */
+/* =========================
+   SHOP CATEGORIES
+========================= */
 
 .categories {
   display: grid;
@@ -159,10 +185,10 @@ nav a:hover {
 }
 
 .category {
+  background: #f5f5f5;
   border-radius: 18px;
   overflow: hidden;
-  background: #f5f5f5;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .category:hover {
@@ -170,7 +196,6 @@ nav a:hover {
 }
 
 .category img {
-  width: 100%;
   height: 240px;
   object-fit: cover;
 }
@@ -189,19 +214,17 @@ nav a:hover {
 }
 
 
-/* THRIFT SECTION */
+/* =========================
+   THRIFT STORE
+========================= */
 
-.thrift {
+.thrift-section {
   background: #111;
   color: white;
 }
 
-.thrift .section-title h2 {
+.thrift-section .section-title h2 {
   color: white;
-}
-
-.thrift .section-title p {
-  color: #ff4f9a;
 }
 
 .thrift-grid {
@@ -213,772 +236,4 @@ nav a:hover {
 .thrift-card {
   background: white;
   color: #111;
-  border-radius: 18px;
-  overflow: hidden;
-}
-
-.thrift-card img {
-  width: 100%;
-  height: 370px;
-  object-fit: cover;
-}
-
-.thrift-info {
-  padding: 22px;
-}
-
-.thrift-info h3 {
-  margin-bottom: 7px;
-}
-
-.thrift-info p {
-  color: #666;
-  font-size: 14px;
-}
-
-
-/* STORE */
-
-.store-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.product {
-  border: 1px solid #eee;
-  border-radius: 18px;
-  overflow: hidden;
-  background: white;
-  transition: .3s;
-}
-
-.product:hover {
-  transform: translateY(-5px);
-}
-
-.product img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-}
-
-.product-info {
-  padding: 22px;
-}
-
-.product-info h3 {
-  margin-bottom: 8px;
-}
-
-.product-info p {
-  color: #666;
-  font-size: 14px;
-}
-
-
-/* GALLERY */
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-}
-
-.gallery img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 18px;
-}
-
-
-/* WHY US */
-
-.why {
-  background: #f7f7f7;
-}
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.why-card {
-  background: white;
-  padding: 30px;
-  border-radius: 18px;
-}
-
-.why-card .icon {
-  font-size: 35px;
-  margin-bottom: 15px;
-}
-
-.why-card h3 {
-  margin-bottom: 10px;
-}
-
-.why-card p {
-  color: #666;
-}
-
-
-/* CONTACT */
-
-.contact {
-  text-align: center;
-  background: #fff0f6;
-}
-
-.contact h2 {
-  font-size: 42px;
-  margin: 10px 0;
-}
-
-.contact p {
-  color: #666;
-  margin: 8px;
-}
-
-
-/* FOOTER */
-
-footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 45px 20px;
-}
-
-footer h2 {
-  margin-bottom: 8px;
-}
-
-footer span {
-  color: #ff4f9a;
-}
-
-footer p {
-  color: #aaa;
-  margin-top: 7px;
-}
-
-
-/* MOBILE */
-
-@media(max-width:1000px) {
-
-  .categories {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-@media(max-width:800px) {
-
-  header {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  nav {
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 46px;
-  }
-
-  .hero-image {
-    height: 450px;
-  }
-
-  .categories,
-  .thrift-grid,
-  .store-grid,
-  .why-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-}
-
-@media(max-width:550px) {
-
-  .section {
-    padding: 60px 5%;
-  }
-
-  .hero {
-    padding: 50px 5%;
-  }
-
-  .hero h1 {
-    font-size: 40px;
-  }
-
-  .categories,
-  .thrift-grid,
-  .store-grid,
-  .gallery,
-  .why-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-image {
-    height: 400px;
-  }
-
-}
-
-</style>
-</head>
-
-
-<body>
-
-
-<!-- HEADER -->
-
-<header>
-
-  <div class="logo">
-    Kristie<span>'s</span> Hub
-  </div>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#categories">Shop</a>
-    <a href="#thrift">Thrift Wear</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-</header>
-
-
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-  <div class="hero-text">
-
-    <div class="small-text">
-      WELCOME TO KRISTIE'S HUB
-    </div>
-
-    <h1>
-      Fashion that feels <span>like you.</span>
-    </h1>
-
-    <p>
-      Discover stylish clothing, quality thrift wear,
-      accessories, beautiful nails and professional
-      hair styling — all in one place.
-    </p>
-
-    <a
-      class="button"
-      href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20want%20to%20shop."
-      target="_blank">
-      Shop on WhatsApp
-    </a>
-
-  </div>
-
-
-  <div class="hero-image">
-
-    <img
-      src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=85"
-      alt="Kristie's Hub Fashion">
-
-  </div>
-
-</section>
-
-
-
-<!-- CATEGORIES -->
-
-<section class="section" id="categories">
-
-  <div class="section-title">
-
-    <p>SHOP BY CATEGORY</p>
-
-    <h2>Find Your Style</h2>
-
-  </div>
-
-
-  <div class="categories">
-
-
-    <div class="category">
-
-      <img
-        src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=85"
-        alt="Clothing">
-
-      <div class="category-content">
-
-        <h3>Clothing</h3>
-
-        <p>
-          Trendy pieces for your wardrobe.
-        </p>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="category">
-
-      <img
-        src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=85"
-        alt="Thrift Wear">
-
-      <div class="category-content">
-
-        <h3>Thrift Wear</h3>
-
-        <p>
-          Unique second-hand fashion finds.
-        </p>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="category">
-
-      <img
-        src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=800&q=85"
-        alt="Accessories">
-
-      <div class="category-content">
-
-        <h3>Accessories</h3>
-
-        <p>
-          Complete your look with accessories.
-        </p>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="category">
-
-      <img
-        src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=85"
-        alt="Nail Service">
-
-      <div class="category-content">
-
-        <h3>Nail Service</h3>
-
-        <p>
-          Stylish nails for every occasion.
-        </p>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="category">
-
-      <img
-        src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=85"
-        alt="Hair Styling">
-
-      <div class="category-content">
-
-        <h3>Hair Styling</h3>
-
-        <p>
-          Beautiful hairstyles made for you.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- THRIFT WEAR -->
-
-<section class="section thrift" id="thrift">
-
-  <div class="section-title">
-
-    <p>THRIFT WEAR</p>
-
-    <h2>Unique Finds. Great Style.</h2>
-
-  </div>
-
-
-  <div class="thrift-grid">
-
-
-    <div class="thrift-card">
-
-      <img
-        src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85"
-        alt="Thrift fashion">
-
-      <div class="thrift-info">
-
-        <h3>Thrift Fashion</h3>
-
-        <p>
-          Carefully selected fashion pieces.
-        </p>
-
-        <a
-          class="button"
-          href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20want%20to%20see%20your%20thrift%20wear."
-          target="_blank">
-          View Thrift Wear
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="thrift-card">
-
-      <img
-        src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=900&q=85"
-        alt="Thrift clothing">
-
-      <div class="thrift-info">
-
-        <h3>Pre-Loved Styles</h3>
-
-        <p>
-          Stand-out pieces for your wardrobe.
-        </p>
-
-        <a
-          class="button"
-          href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20want%20to%20see%20your%20pre-loved%20styles."
-          target="_blank">
-          Ask on WhatsApp
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="thrift-card">
-
-      <img
-        src="https://images.unsplash.com/photo-1506629905607-d9c297d7c3c7?auto=format&fit=crop&w=900&q=85"
-        alt="Fashion">
-
-      <div class="thrift-info">
-
-        <h3>New Thrift Drops</h3>
-
-        <p>
-          New pieces added regularly.
-        </p>
-
-        <a
-          class="button"
-          href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20please%20send%20me%20your%20latest%20thrift%20drops."
-          target="_blank">
-          See Latest Drops
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- STORE -->
-
-<section class="section">
-
-  <div class="section-title">
-
-    <p>FEATURED COLLECTION</p>
-
-    <h2>What's New</h2>
-
-  </div>
-
-
-  <div class="store-grid">
-
-
-    <div class="product">
-
-      <img
-        src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85"
-        alt="Fashion">
-
-      <div class="product-info">
-
-        <h3>Fashion Pieces</h3>
-
-        <p>
-          Ask us about available items and prices.
-        </p>
-
-        <a
-          class="button"
-          href="https://wa.me/2348169142311"
-          target="_blank">
-          Order
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="product">
-
-      <img
-        src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=85"
-        alt="Accessories">
-
-      <div class="product-info">
-
-        <h3>Accessories</h3>
-
-        <p>
-          Ask about our available accessories.
-        </p>
-
-        <a
-          class="button"
-          href="https://wa.me/2348169142311"
-          target="_blank">
-          Order
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="product">
-
-      <img
-        src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=900&q=85"
-        alt="Beauty">
-
-      <div class="product-info">
-
-        <h3>Beauty & Nails</h3>
-
-        <p>
-          Book a beauty or nail service.
-        </p>
-
-        <a
-          class="button"
-          href="https://wa.me/2348169142311"
-          target="_blank">
-          Book
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- GALLERY -->
-
-<section class="section" id="gallery">
-
-  <div class="section-title">
-
-    <p>KRISTIE'S HUB</p>
-
-    <h2>Our Style Gallery</h2>
-
-  </div>
-
-
-  <div class="gallery">
-
-    <img
-      src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=85"
-      alt="Fashion style">
-
-    <img
-      src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=900&q=85"
-      alt="Clothing store">
-
-    <img
-      src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?auto=format&fit=crop&w=900&q=85"
-      alt="Beauty">
-
-    <img
-      src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85"
-      alt="Clothing">
-
-  </div>
-
-</section>
-
-
-
-<!-- WHY KRISTIE'S HUB -->
-
-<section class="section why">
-
-  <div class="section-title">
-
-    <p>WHY SHOP WITH US</p>
-
-    <h2>More Than Just Fashion</h2>
-
-  </div>
-
-
-  <div class="why-grid">
-
-
-    <div class="why-card">
-
-      <div class="icon">✨</div>
-
-      <h3>Unique Styles</h3>
-
-      <p>
-        Find fashion pieces that help you express your own style.
-      </p>
-
-    </div>
-
-
-    <div class="why-card">
-
-      <div class="icon">🛍️</div>
-
-      <h3>Thrift Finds</h3>
-
-      <p>
-        Discover interesting pre-loved pieces and new thrift drops.
-      </p>
-
-    </div>
-
-
-    <div class="why-card">
-
-      <div class="icon">💬</div>
-
-      <h3>Easy Ordering</h3>
-
-      <p>
-        Contact us directly through WhatsApp to ask questions or order.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- CONTACT -->
-
-<section class="section contact" id="contact">
-
-  <p class="small-text">
-    GET IN TOUCH
-  </p>
-
-  <h2>
-    Ready to find your next style?
-  </h2>
-
-  <p>
-    📍 Lafia, Nasarawa
-  </p>
-
-  <p>
-    📞 +234 816 914 2311
-  </p>
-
-  <a
-    class="button"
-    href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20want%20to%20shop."
-    target="_blank">
-    Chat With Us on WhatsApp
-  </a>
-
-</section>
-
-
-
-<!-- FOOTER -->
-
-<footer>
-
-  <h2>
-    Kristie<span>'s</span> Hub
-  </h2>
-
-  <p>
-    Fashion • Thrift Wear • Accessories • Nails • Hair
-  </p>
-
-  <p>
-    © 2026 Kristie's Hub. All rights reserved.
-  </p>
-
-</footer>
-
-
-</body>
-  </html>
+  border-radius:
