@@ -1,159 +1,900 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+<title>Kristie's Hub</title>
 
-  <meta
-    name="description"
-    content="Kristie's Hub - Nigerian thrift wear, fairly used fashion, accessories, nails and hair."
-  >
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-  <meta
-    name="theme-color"
-    content="#111111"
-  >
+html{
+scroll-behavior:smooth;
+}
 
-  <title>Kristie's Hub | Nigerian Thrift & Fashion</title>
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#ffffff;
+color:#171717;
+}
 
-  <style>
+a{
+text-decoration:none;
+}
 
-    /* =========================================
-       RESET
-    ========================================= */
+header{
+background:#111111;
+color:white;
+padding:18px 6%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+.logo{
+font-size:25px;
+font-weight:bold;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+.logo span{
+color:#ff4f9a;
+}
 
-    body {
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-      background: #ffffff;
-      color: #171717;
-      line-height: 1.6;
-    }
+nav a{
+color:white;
+margin-left:18px;
+font-size:14px;
+}
 
-    button,
-    input {
-      font-family: inherit;
-    }
+nav a:hover{
+color:#ff4f9a;
+}
 
-    a {
-      text-decoration: none;
-    }
+.hero{
+background:#111111;
+color:white;
+padding:90px 7%;
+text-align:center;
+}
 
-    img {
-      max-width: 100%;
-    }
+.hero h1{
+font-size:52px;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:#ff4f9a;
+}
+
+.hero p{
+max-width:650px;
+margin:auto;
+color:#dddddd;
+font-size:17px;
+}
+
+.button{
+display:inline-block;
+background:#ff4f9a;
+color:white;
+padding:13px 24px;
+border-radius:30px;
+font-weight:bold;
+margin-top:25px;
+}
+
+section{
+padding:70px 7%;
+}
+
+.title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.title small{
+color:#ff4f9a;
+font-weight:bold;
+letter-spacing:2px;
+}
+
+.title h2{
+font-size:38px;
+margin-top:8px;
+}
+
+.title p{
+max-width:600px;
+margin:10px auto;
+color:#666666;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+max-width:1100px;
+margin:auto;
+}
+
+.card{
+background:white;
+border:1px solid #eeeeee;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.card-image{
+height:240px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:80px;
+background:#ffe5ef;
+}
+
+.card-content{
+padding:22px;
+}
+
+.card-content h3{
+font-size:20px;
+margin-bottom:8px;
+}
+
+.card-content p{
+color:#666666;
+font-size:14px;
+}
+
+.thrift{
+background:#111111;
+color:white;
+}
+
+.thrift .title h2{
+color:white;
+}
+
+.thrift .title p{
+color:#bbbbbb;
+}
+
+.thrift .card{
+color:#171717;
+}
+
+.tag{
+display:inline-block;
+background:#ffe1ed;
+color:#d82c70;
+padding:5px 10px;
+border-radius:20px;
+font-size:11px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.products{
+background:#f7f3f5;
+}
+
+.services{
+background:white;
+}
+
+.why{
+background:#fff0f6;
+}
+
+.contact{
+background:#ffe8f2;
+text-align:center;
+}
+
+.contact h2{
+font-size:40px;
+margin:10px 0;
+}
+
+.contact p{
+margin:7px;
+color:#555555;
+}
+
+footer{
+background:#111111;
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+footer p{
+color:#999999;
+font-size:13px;
+margin-top:7px;
+}
+
+@media(max-width:800px){
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+nav{
+text-align:center;
+}
+
+nav a{
+display:inline-block;
+margin:5px;
+}
+
+.hero{
+padding:70px 5%;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+section{
+padding:55px 5%;
+}
+
+.title h2{
+font-size:30px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Kristie<span>'s</span> Hub
+</div>
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#shop">Shop</a>
+
+<a href="#thrift">Thrift Wear</a>
+
+<a href="#services">Services</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
 
 
-    /* =========================================
-       HEADER
-    ========================================= */
+<section class="hero" id="home">
 
-    header {
-      width: 100%;
-      background: #111111;
-      color: white;
-      padding: 17px 6%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 9999;
-    }
+<h1>
+Welcome to <span>Kristie's Hub</span>
+</h1>
 
-    .logo {
-      color: white;
-      font-size: 25px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      white-space: nowrap;
-    }
+<p>
+Your Nigerian thrift and fashion destination for
+quality fairly used clothing, accessories,
+shoes, nails and hair services.
+</p>
 
-    .logo span {
-      color: #ff4f9a;
-    }
+<a
+class="button"
+href="https://wa.me/2348169142311"
+target="_blank">
+Shop on WhatsApp
+</a>
 
-    .menu-button {
-      display: none;
-      background: none;
-      border: none;
-      color: white;
-      font-size: 28px;
-      cursor: pointer;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    nav a {
-      color: white;
-      font-size: 14px;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #ff4f9a;
-    }
+</section>
 
 
-    /* =========================================
-       HERO
-    ========================================= */
+<section id="shop">
 
-    .hero {
-      min-height: 650px;
-      padding: 90px 7%;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 50px;
-      align-items: center;
+<div class="title">
 
-      background:
-        radial-gradient(
-          circle at 80% 20%,
-          #ff4f9a55,
-          transparent 30%
-        ),
-        linear-gradient(
-          135deg,
-          #111111,
-          #28151f
-        );
+<small>SHOP</small>
 
-      color: white;
-    }
+<h2>
+Nigerian Thrift Categories
+</h2>
 
-    .hero-content {
-      max-width: 650px;
-    }
+<p>
+Discover affordable and unique fairly used fashion.
+</p>
 
-    .hero-label {
-      display: inline-block;
-      color: #ff72ad;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 3px;
-      margin-bottom: 15px;
-    }
+</div>
 
-    .hero h
+
+<div class="grid">
+
+
+<div class="card">
+
+<div class="card-image">
+👗
+</div>
+
+<div class="card-content">
+
+<h3>
+Thrift Dresses
+</h3>
+
+<p>
+Quality fairly used dresses for different occasions.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-image">
+👕
+</div>
+
+<div class="card-content">
+
+<h3>
+Tops & Shirts
+</h3>
+
+<p>
+Trendy thrift tops and shirts for everyday style.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-image">
+👖
+</div>
+
+<div class="card-content">
+
+<h3>
+Jeans & Trousers
+</h3>
+
+<p>
+Fairly used jeans and trousers at affordable prices.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-image">
+👜
+</div>
+
+<div class="card-content">
+
+<h3>
+Bags & Accessories
+</h3>
+
+<p>
+Fashion bags and accessories to complete your look.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-image">
+👟
+</div>
+
+<div class="card-content">
+
+<h3>
+Thrift Shoes
+</h3>
+
+<p>
+Affordable fairly used footwear and casual shoes.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-image">
+🧥
+</div>
+
+<div class="card-content">
+
+<h3>
+Jackets & Outerwear
+</h3>
+
+<p>
+Unique thrift jackets and fashionable outerwear.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<section class="thrift" id="thrift">
+
+<div class="title">
+
+<small>NIGERIAN FAIRLY USED FASHION</small>
+
+<h2>
+Thrift Wear Collection
+</h2>
+
+<p>
+Fresh thrift finds for customers looking for
+unique and affordable fashion.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<div class="card-image">
+👗
+</div>
+
+<div class="card-content">
+
+<span class="tag">
+THRIFT
+</span>
+
+<h3>
+Vintage Dresses
+</h3>
+
+<p>
+Unique fairly used dresses and fashion finds.
+</p>
+
+<a
+class="button"
+href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20want%20to%20see%20your%20available%20thrift%20dresses."
+target="_blank">
+Ask on WhatsApp
+</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-image">
+👚
+</div>
+
+<div class="card-content">
+
+<span class="tag">
+THRIFT
+</span>
+
+<h3>
+Tops & Shirts
+</h3>
+
+<p>
+Affordable thrift tops and shirts.
+</p>
+
+<a
+class="button"
+href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20want%20to%20see%20your%20available%20thrift%20tops."
+target="_blank">
+Ask on WhatsApp
+</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-image">
+👖
+</div>
+
+<div class="card-content">
+
+<span class="tag">
+THRIFT
+</span>
+
+<h3>
+Classic Jeans
+</h3>
+
+<p>
+Fairly used jeans and trousers for everyday outfits.
+</p>
+
+<a
+class="button"
+href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20want%20to%20see%20your%20available%20jeans."
+target="_blank">
+Ask on WhatsApp
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<section class="products">
+
+<div class="title">
+
+<small>NEW ARRIVALS</small>
+
+<h2>
+Fresh Thrift Drops
+</h2>
+
+<p>
+New fashion categories can be added here as stock arrives.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<div class="card-image">
+👚
+</div>
+
+<div class="card-content">
+
+<h3>
+Everyday Wear
+</h3>
+
+<p>
+Simple and stylish thrift pieces for everyday use.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-image">
+👜
+</div>
+
+<div class="card-content">
+
+<h3>
+Fashion Bags
+</h3>
+
+<p>
+Trendy bags and accessories for your outfits.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-image">
+👟
+</div>
+
+<div class="card-content">
+
+<h3>
+Casual Footwear
+</h3>
+
+<p>
+Affordable thrift footwear and casual styles.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<section class="services" id="services">
+
+<div class="title">
+
+<small>BEAUTY SERVICES</small>
+
+<h2>
+More From Kristie's Hub
+</h2>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<div class="card-image">
+💇
+</div>
+
+<div class="card-content">
+
+<h3>
+Hair Styling
+</h3>
+
+<p>
+Hair styling services available at Kristie's Hub.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-image">
+💅
+</div>
+
+<div class="card-content">
+
+<h3>
+Nail Service
+</h3>
+
+<p>
+Nails and beauty services for your complete look.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-image">
+💎
+</div>
+
+<div class="card-content">
+
+<h3>
+Accessories
+</h3>
+
+<p>
+Fashion accessories to complete your outfit.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<section class="why">
+
+<div class="title">
+
+<small>WHY SHOP WITH US</small>
+
+<h2>
+Fashion Made Easy
+</h2>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<div class="card-image">
+✨
+</div>
+
+<div class="card-content">
+
+<h3>
+Unique Finds
+</h3>
+
+<p>
+Discover different thrift pieces and fashion finds.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-image">
+💰
+</div>
+
+<div class="card-content">
+
+<h3>
+Affordable Style
+</h3>
+
+<p>
+Find stylish pieces without spending too much.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-image">
+💬
+</div>
+
+<div class="card-content">
+
+<h3>
+Easy Ordering
+</h3>
+
+<p>
+Message us directly on WhatsApp to ask about items.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+<div class="title">
+
+<small>CONTACT US</small>
+
+<h2>
+Ready To Shop?
+</h2>
+
+<p>
+Ask about current thrift items and availability.
+</p>
+
+</div>
+
+
+<p>
+📍 Lafia, Nasarawa
+</p>
+
+<p>
+📞 +234 816 914 2311
+</p>
+
+<p>
+🛍️ Nigerian Thrift Wear
+</p>
+
+<a
+class="button"
+href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20want%20to%20shop."
+target="_blank">
+Chat on WhatsApp
+</a>
+
+</section>
+
+
+<footer>
+
+<div class="logo">
+Kristie<span>'s</span> Hub
+</div>
+
+<p>
+Nigerian Thrift Wear • Fashion • Accessories • Nails • Hair
+</p>
+
+<p>
+Lafia, Nasarawa
+</p>
+
+<p>
+© 2026 Kristie's Hub
+</p>
+
+</footer>
+
+</body>
+</html>
