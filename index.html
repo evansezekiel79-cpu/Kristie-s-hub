@@ -4,348 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Kristie's Hub | Fashion & Beauty</title>
+  <title>Kristie's Hub | Fashion, Hair, Nails & Accessories</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <meta name="description" content="Kristie's Hub - Fashion, accessories, nails and hair styling in Lafia, Nasarawa.">
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #fafafa;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    /* HEADER */
-    header {
-      background: #111;
-      color: white;
-      padding: 18px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .logo {
-      font-size: 25px;
-      font-weight: bold;
-    }
-
-    .tagline {
-      font-size: 12px;
-      color: #ccc;
-      margin-top: 2px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 18px;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: #ff5c91;
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 620px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 60px 20px;
-
-      background:
-        linear-gradient(rgba(0,0,0,.58), rgba(0,0,0,.58)),
-        url("file_000000003d8c8210a7241322a759242f.png");
-
-      background-size: cover;
-      background-position: center;
-      color: white;
-    }
-
-    .hero-content {
-      max-width: 750px;
-    }
-
-    .hero h1 {
-      font-size: 55px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 21px;
-      margin-bottom: 30px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 14px 28px;
-      background: #ff4f87;
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-      margin: 5px;
-      transition: .3s;
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-      opacity: .9;
-    }
-
-    .dark-button {
-      background: #111;
-    }
-
-    /* GENERAL SECTIONS */
-    section {
-      padding: 75px 6%;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .section-title h2 {
-      font-size: 36px;
-      margin-bottom: 8px;
-    }
-
-    .section-title p {
-      color: #777;
-    }
-
-    /* SERVICES */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .service {
-      background: white;
-      padding: 30px 20px;
-      border-radius: 18px;
-      text-align: center;
-      box-shadow: 0 5px 20px rgba(0,0,0,.08);
-    }
-
-    .service-icon {
-      font-size: 45px;
-      margin-bottom: 12px;
-    }
-
-    .service h3 {
-      margin-bottom: 8px;
-    }
-
-    .service p {
-      color: #666;
-      font-size: 14px;
-    }
-
-    /* FEATURED */
-    .featured {
-      background: #f2f2f2;
-    }
-
-    .featured-box {
-      max-width: 850px;
-      margin: auto;
-      background: white;
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: 0 8px 30px rgba(0,0,0,.10);
-      text-align: center;
-    }
-
-    .featured-box img {
-      width: 100%;
-      height: 430px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .featured-content {
-      padding: 30px;
-    }
-
-    .featured-content h3 {
-      font-size: 27px;
-      margin-bottom: 10px;
-    }
-
-    .featured-content p {
-      color: #666;
-      margin-bottom: 18px;
-    }
-
-    /* FOUR IMAGE CARDS */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 28px;
-      max-width: 1050px;
-      margin: auto;
-    }
-
-    .card {
-      background: white;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 7px 28px rgba(0,0,0,.10);
-      transition: .3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card img {
-      width: 100%;
-      height: 360px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .card-content {
-      padding: 22px;
-      text-align: center;
-    }
-
-    .card-content h3 {
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-
-    .card-content p {
-      color: #666;
-      font-size: 14px;
-    }
-
-    /* CONTACT */
-    .contact {
-      background: #111;
-      color: white;
-      text-align: center;
-    }
-
-    .contact .section-title p {
-      color: #ccc;
-    }
-
-    .contact-info {
-      margin: 20px 0;
-    }
-
-    .contact-info p {
-      margin: 12px 0;
-      color: #ddd;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #080808;
-      color: #aaa;
-      text-align: center;
-      padding: 22px;
-      font-size: 14px;
-    }
-
-    /* MOBILE */
-    @media (max-width: 850px) {
-
-      header {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      nav a {
-        margin: 0 7px;
-      }
-
-      .hero h1 {
-        font-size: 42px;
-      }
-
-      .services {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 550px) {
-
-      .hero {
-        min-height: 530px;
-      }
-
-      .hero h1 {
-        font-size: 36px;
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-
-      .services {
-        grid-template-columns: 1fr;
-      }
-
-      .card img {
-        height: 320px;
-      }
-
-      .featured-box img {
-        height: 330px;
-      }
-
-      nav {
-        text-align: center;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 4px 5px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-
   <!-- HEADER -->
   <header>
-
-    <div>
-      <div class="logo">Kristie's Hub</div>
-
-      <div class="tagline">
-        Fashion • Accessories • Nails • Hair
-      </div>
-    </div>
+    <div class="logo">Kristie's Hub</div>
 
     <nav>
       <a href="#home">Home</a>
@@ -354,274 +24,191 @@
       <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
     </nav>
-
   </header>
 
 
-  <!-- HOME -->
-  <section class="hero" id="home">
+  <!-- HERO -->
+  <section id="home" class="hero">
 
-    <div class="hero-content">
+    <div class="hero-text">
+      <p class="small-title">FASHION • ACCESSORIES • NAILS • HAIR</p>
 
-      <h1>Welcome to Kristie's Hub</h1>
+      <h1>Style that makes<br>you stand out.</h1>
 
       <p>
-        Style, beauty and fashion all in one place.
+        Discover beautiful fashion pieces, accessories,
+        nail services and professional hair styling.
       </p>
 
       <a
         class="button"
-        href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20want%20to%20make%20an%20order."
+        href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20would%20like%20to%20place%20an%20order."
         target="_blank">
         Book / Order Now
       </a>
+    </div>
 
+    <div class="hero-image">
+      <img
+        src="file_000000003d8c8210a7241322a759242f.png"
+        alt="Kristie's Hub fashion">
     </div>
 
   </section>
 
 
   <!-- SERVICES -->
-  <section id="services">
+  <section id="services" class="section">
 
     <div class="section-title">
-
-      <h2>What We Offer</h2>
-
-      <p>
-        Everything you need to complete your look.
-      </p>
-
+      <p>WHAT WE OFFER</p>
+      <h2>Everything you need to complete your look.</h2>
     </div>
 
+    <div class="service-grid">
 
-    <div class="services">
-
-
-      <div class="service">
-
-        <div class="service-icon">👗</div>
-
-        <h3>Clothing</h3>
-
-        <p>
-          Discover stylish and beautiful clothing for your everyday look.
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <div class="service-icon">👜</div>
-
-        <h3>Accessories</h3>
-
-        <p>
-          Complete your outfit with fashionable accessories.
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <div class="service-icon">💅</div>
-
-        <h3>Nail Service</h3>
-
-        <p>
-          Get your nails beautifully fixed and styled.
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <div class="service-icon">💇‍♀️</div>
-
-        <h3>Hair Styling</h3>
-
-        <p>
-          Professional hair styling to complete your look.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-  <!-- FEATURED SHOP -->
-  <section class="featured" id="shop">
-
-    <div class="section-title">
-
-      <h2>Featured Collection</h2>
-
-      <p>
-        Discover the latest from Kristie's Hub.
-      </p>
-
-    </div>
-
-
-    <div class="featured-box">
-
-      <img
-        src="file_000000003d8c8210a7241322a759242f.png"
-        alt="Kristie's Hub Fashion Collection">
-
-
-      <div class="featured-content">
-
-        <h3>Kristie's Hub Collection</h3>
-
-        <p>
-          Fashion, beauty and accessories all in one place.
-        </p>
-
-        <a
-          class="button dark-button"
-          href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20want%20to%20see%20your%20latest%20collection."
-          target="_blank">
-          View Collection
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- FOUR IMAGE SERVICES -->
-  <section id="gallery">
-
-    <div class="section-title">
-
-      <h2>Explore Our Services</h2>
-
-      <p>
-        Choose what you need from Kristie's Hub.
-      </p>
-
-    </div>
-
-
-    <div class="gallery">
-
-
-      <!-- HAIR STYLING -->
-      <div class="card">
-
-        <img
-          src="file_000000003d8c8210a7241322a759242f.png"
-          alt="Hair Styling">
-
-        <div class="card-content">
-
-          <h3>💇‍♀️ Hair Styling</h3>
-
-          <p>
-            Professional hair styling to complete your look.
-          </p>
-
-          <a
-            class="button dark-button"
-            href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20want%20to%20book%20a%20hair%20styling%20service."
-            target="_blank">
-            Book Now
-          </a>
-
+      <div class="service-card">
+        <div class="service-image">
+          <img
+            src="file_000000003d8c8210a7241322a759242f.png"
+            alt="Hair Styling">
         </div>
 
+        <h3>Hair Styling</h3>
+        <p>Beautiful hairstyles designed to complete your look.</p>
       </div>
 
 
-      <!-- ACCESSORIES -->
-      <div class="card">
+      <div class="service-card">
+        <div class="service-image">
+          <img
+            src="file_000000003d8c8210a7241322a759242f.png"
+            alt="Accessories">
+        </div>
 
+        <h3>Accessories</h3>
+        <p>Fashion accessories to add the perfect finishing touch.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-image">
+          <img
+            src="file_000000003d8c8210a7241322a759242f.png"
+            alt="Nail Service">
+        </div>
+
+        <h3>Nail Service</h3>
+        <p>Stylish nail designs for every occasion.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-image">
+          <img
+            src="file_000000003d8c8210a7241322a759242f.png"
+            alt="Clothing">
+        </div>
+
+        <h3>Clothing</h3>
+        <p>Trendy fashion pieces made to express your style.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SHOP -->
+  <section id="shop" class="shop-section">
+
+    <div class="section-title">
+      <p>FEATURED COLLECTION</p>
+      <h2>Shop our latest fashion pieces.</h2>
+    </div>
+
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img
+          src="file_000000003d8c8210a7241322a759242f.png"
+          alt="Fashion product">
+
+        <div class="product-info">
+          <h3>Fashion Collection</h3>
+          <p>Contact us for available styles and prices.</p>
+
+          <a
+            href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20want%20to%20see%20your%20available%20fashion%20items."
+            target="_blank">
+            Ask on WhatsApp
+          </a>
+        </div>
+      </div>
+
+
+      <div class="product-card">
         <img
           src="file_000000003d8c8210a7241322a759242f.png"
           alt="Accessories">
 
-        <div class="card-content">
-
-          <h3>👜 Accessories</h3>
-
-          <p>
-            Beautiful accessories to complete your outfit.
-          </p>
+        <div class="product-info">
+          <h3>Accessories</h3>
+          <p>Ask us about our latest accessories.</p>
 
           <a
-            class="button dark-button"
-            href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20want%20to%20see%20your%20accessories."
+            href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20want%20to%20see%20your%20available%20accessories."
             target="_blank">
-            View Accessories
+            Ask on WhatsApp
           </a>
-
         </div>
+      </div>
 
+    </div>
+
+  </section>
+
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section">
+
+    <div class="section-title">
+      <p>OUR GALLERY</p>
+      <h2>Explore Our Services</h2>
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-card">
+        <img
+          src="file_000000003d8c8210a7241322a759242f.png"
+          alt="Hair Styling">
+        <h3>Hair Styling</h3>
       </div>
 
 
-      <!-- NAIL SERVICE -->
-      <div class="card">
+      <div class="gallery-card">
+        <img
+          src="file_000000003d8c8210a7241322a759242f.png"
+          alt="Accessories">
+        <h3>Accessories</h3>
+      </div>
 
+
+      <div class="gallery-card">
         <img
           src="file_000000003d8c8210a7241322a759242f.png"
           alt="Nail Service">
-
-        <div class="card-content">
-
-          <h3>💅 Nail Service</h3>
-
-          <p>
-            Get your nails beautifully fixed and styled.
-          </p>
-
-          <a
-            class="button dark-button"
-            href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20want%20to%20book%20a%20nail%20service."
-            target="_blank">
-            Book Now
-          </a>
-
-        </div>
-
+        <h3>Nail Service</h3>
       </div>
 
 
-      <!-- CLOTHING -->
-      <div class="card">
-
+      <div class="gallery-card">
         <img
           src="file_000000003d8c8210a7241322a759242f.png"
           alt="Clothing">
-
-        <div class="card-content">
-
-          <h3>👗 Clothing</h3>
-
-          <p>
-            Discover stylish clothing for your everyday look.
-          </p>
-
-          <a
-            class="button dark-button"
-            href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20want%20to%20see%20your%20clothing."
-            target="_blank">
-            Shop Clothing
-          </a>
-
-        </div>
-
+        <h3>Clothing</h3>
       </div>
-
 
     </div>
 
@@ -629,45 +216,51 @@
 
 
   <!-- CONTACT -->
-  <section class="contact" id="contact">
+  <section id="contact" class="contact-section">
 
-    <div class="section-title">
+    <div>
+      <p class="small-title">CONTACT US</p>
 
-      <h2>Contact Kristie's Hub</h2>
+      <h2>Let's create your perfect look.</h2>
 
       <p>
-        Ready to order or book an appointment?
+        Visit us in Lafia, Nasarawa or contact us directly
+        to place an order or book a service.
       </p>
-
     </div>
-
 
     <div class="contact-info">
 
-      <p>📍 Lafia, Nasarawa</p>
+      <p><strong>Location:</strong> Lafia, Nasarawa</p>
 
-      <p>📞 +234 816 914 2311</p>
+      <p>
+        <strong>Phone:</strong>
+        +234 816 914 2311
+      </p>
+
+      <a
+        class="button"
+        href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20would%20like%20to%20make%20an%20order."
+        target="_blank">
+        Chat on WhatsApp
+      </a>
 
     </div>
-
-
-    <a
-      class="button"
-      href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20would%20like%20to%20make%20an%20order."
-      target="_blank">
-      💬 Order / Book on WhatsApp
-    </a>
 
   </section>
 
 
   <!-- FOOTER -->
   <footer>
+    <h3>Kristie's Hub</h3>
 
-    © 2026 Kristie's Hub. All Rights Reserved.
+    <p>Fashion • Accessories • Nails • Hair</p>
 
+    <p>© 2026 Kristie's Hub. All rights reserved.</p>
   </footer>
 
+
+  <script src="script.js"></script>
 
 </body>
 </html>
