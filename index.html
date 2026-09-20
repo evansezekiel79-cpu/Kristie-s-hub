@@ -10,295 +10,489 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      background: #fff;
+      font-family: Arial, sans-serif;
+      background: #fafafa;
       color: #222;
+      line-height: 1.6;
     }
 
     header {
       background: #111;
       color: white;
-      padding: 20px;
-      text-align: center;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    header h1 {
-      font-size: 30px;
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
     }
 
-    header p {
-      margin-top: 6px;
+    .tagline {
+      font-size: 12px;
       color: #ddd;
-    }
-
-    nav {
-      background: #222;
-      padding: 12px;
-      text-align: center;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 10px;
+      margin-left: 18px;
       font-size: 14px;
     }
 
+    nav a:hover {
+      color: #ff8fb1;
+    }
+
     .hero {
-      min-height: 480px;
+      min-height: 600px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 30px 20px;
-      background: linear-gradient(135deg, #f7d6e0, #f6eef2);
+      padding: 60px 20px;
+      background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("file_000000003d8c8210a7241322a759242f.png");
+      background-size: cover;
+      background-position: center;
+      color: white;
     }
 
-    .hero h2 {
-      font-size: 42px;
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
       margin-bottom: 15px;
     }
 
     .hero p {
-      font-size: 18px;
-      margin-bottom: 25px;
+      font-size: 20px;
+      margin-bottom: 28px;
     }
 
     .button {
       display: inline-block;
-      background: #111;
+      background: #ff4f87;
       color: white;
-      padding: 14px 24px;
+      padding: 14px 28px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
+      margin: 5px;
+    }
+
+    .button.dark {
+      background: #111;
     }
 
     section {
-      padding: 55px 20px;
+      padding: 70px 6%;
+    }
+
+    .section-title {
       text-align: center;
+      margin-bottom: 40px;
     }
 
-    section h2 {
-      font-size: 30px;
-      margin-bottom: 30px;
+    .section-title h2 {
+      font-size: 34px;
+      margin-bottom: 8px;
     }
 
-    .cards {
+    .section-title p {
+      color: #777;
+    }
+
+    .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
-      max-width: 1000px;
-      margin: auto;
     }
 
-    .card {
+    .service {
       background: white;
-      border-radius: 18px;
       padding: 30px 20px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
     }
 
-    .card .icon {
-      font-size: 50px;
+    .service-icon {
+      font-size: 45px;
       margin-bottom: 15px;
     }
 
-    .card h3 {
+    .service h3 {
       margin-bottom: 10px;
     }
 
-    .gallery {
-      background: #fafafa;
+    .service p {
+      color: #666;
+      font-size: 14px;
     }
 
-    .gallery-box {
-      max-width: 1000px;
-      margin: auto;
+    .shop {
+      background: #f3f3f3;
+    }
+
+    .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
     }
 
-    .gallery-item {
-      height: 220px;
-      border-radius: 15px;
-      background: #eee;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #888;
+    .product {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 6px 25px rgba(0,0,0,.09);
+    }
+
+    .product img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h3 {
+      margin-bottom: 8px;
+    }
+
+    .product-info p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .gallery-card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .gallery-card div {
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
     }
 
     .contact {
+      text-align: center;
       background: #111;
       color: white;
     }
 
     .contact p {
-      margin: 10px 0;
-    }
-
-    .whatsapp {
-      background: #25D366;
-      color: white;
-      display: inline-block;
-      padding: 15px 25px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 20px;
+      margin: 12px 0;
+      color: #ddd;
     }
 
     footer {
-      background: #000;
+      background: #080808;
       color: #aaa;
       text-align: center;
-      padding: 20px;
+      padding: 22px;
       font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 520px;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- HEADER -->
   <header>
-    <h1>Kristie's Hub</h1>
-    <p>Fashion • Accessories • Nails • Hair</p>
+    <div>
+      <div class="logo">Kristie's Hub</div>
+      <div class="tagline">Fashion • Accessories • Nails • Hair</div>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#shop">Shop</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
 
+  <!-- HERO -->
   <section class="hero" id="home">
-    <div>
-      <h2>Welcome to Kristie's Hub</h2>
-      <p>Style, beauty and fashion all in one place.</p>
-      <a class="button" href="#contact">Book / Order Now</a>
+    <div class="hero-content">
+      <h1>Welcome to Kristie's Hub</h1>
+
+      <p>
+        Style, beauty and fashion all in one place.
+      </p>
+
+      <a
+        class="button"
+        href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20want%20to%20make%20an%20order."
+        target="_blank">
+        Book / Order Now
+      </a>
     </div>
   </section>
 
+
+  <!-- SERVICES -->
   <section id="services">
-    <h2>What We Offer</h2>
+    <div class="section-title">
+      <h2>What We Offer</h2>
+      <p>Everything you need to complete your look.</p>
+    </div>
 
-    <div class="cards">
+    <div class="services">
 
-      <div class="card">
-        <div class="icon">👗</div>
+      <div class="service">
+        <div class="service-icon">👗</div>
         <h3>Clothing</h3>
-        <p>Discover stylish and beautiful clothing for your everyday look.</p>
+        <p>
+          Discover stylish and beautiful clothing for your everyday look.
+        </p>
       </div>
 
-      <div class="card">
-        <div class="icon">👜</div>
+      <div class="service">
+        <div class="service-icon">👜</div>
         <h3>Accessories</h3>
-        <p>Complete your outfit with fashionable accessories.</p>
+        <p>
+          Complete your outfit with fashionable accessories.
+        </p>
       </div>
 
-      <div class="card">
-        <div class="icon">💅</div>
+      <div class="service">
+        <div class="service-icon">💅</div>
         <h3>Nail Services</h3>
-        <p>Get your nails beautifully fixed and styled.</p>
+        <p>
+          Get your nails beautifully fixed and styled.
+        </p>
       </div>
 
-      <div class="card">
-        <div class="icon">💇‍♀️</div>
+      <div class="service">
+        <div class="service-icon">💇‍♀️</div>
         <h3>Hair Styling</h3>
-        <p>Professional hair styling to complete your look.</p>
+        <p>
+          Professional hair styling to complete your look.
+        </p>
       </div>
 
     </div>
   </section>
 
-  <section class="gallery" id="gallery">
-    <h2>Our Gallery</h2>
 
-    <div class="gallery-box">
-      <div class="gallery-item">Clothing Photo</div>
-      <div class="gallery-item">Accessories Photo</div>
-      <div class="gallery-item">Nails Photo</div>
-      <div class="gallery-item">Hair Photo</div>
+  <!-- SHOP -->
+  <section class="shop" id="shop">
+
+    <div class="section-title">
+      <h2>Featured Collection</h2>
+      <p>Shop some of our latest fashion pieces.</p>
+    </div>
+
+    <div class="products">
+
+      <div class="product">
+        <img
+          src="file_000000003d8c8210a7241322a759242f.png"
+          alt="Fashion collection">
+
+        <div class="product-info">
+          <h3>Latest Fashion</h3>
+          <p>
+            Stylish pieces selected for the Kristie's Hub collection.
+          </p>
+
+          <a
+            class="button dark"
+            href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20am%20interested%20in%20the%20Latest%20Fashion."
+            target="_blank">
+            Order Now
+          </a>
+        </div>
+      </div>
+
+
+      <div class="product">
+        <img
+          src="file_000000003d8c8210a7241322a759242f.png"
+          alt="Accessories">
+
+        <div class="product-info">
+          <h3>Accessories</h3>
+          <p>
+            Complete your outfit with beautiful accessories.
+          </p>
+
+          <a
+            class="button dark"
+            href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20want%20to%20see%20your%20accessories."
+            target="_blank">
+            View Items
+          </a>
+        </div>
+      </div>
+
+
+      <div class="product">
+        <img
+          src="file_000000003d8c8210a7241322a759242f.png"
+          alt="Beauty services">
+
+        <div class="product-info">
+          <h3>Beauty & Style</h3>
+          <p>
+            Nails and hair styling for your next look.
+          </p>
+
+          <a
+            class="button dark"
+            href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20want%20to%20book%20a%20beauty%20service."
+            target="_blank">
+            Book Now
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
+
+  <!-- GALLERY -->
+  <section id="gallery">
+
+    <div class="section-title">
+      <h2>Our Gallery</h2>
+      <p>Take a look at Kristie's Hub.</p>
+    </div>
+
+    <div class="gallery">
+
+      <div class="gallery-card">
+        <img
+          src="file_000000003d8c8210a7241322a759242f.png"
+          alt="Clothing">
+        <div>Clothing Collection</div>
+      </div>
+
+      <div class="gallery-card">
+        <img
+          src="file_000000003d8c8210a7241322a759242f.png"
+          alt="Accessories">
+        <div>Accessories</div>
+      </div>
+
+      <div class="gallery-card">
+        <img
+          src="file_000000003d8c8210a7241322a759242f.png"
+          alt="Nails">
+        <div>Nail Services</div>
+      </div>
+
+      <div class="gallery-card">
+        <img
+          src="file_000000003d8c8210a7241322a759242f.png"
+          alt="Hair">
+        <div>Hair Styling</div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
   <section class="contact" id="contact">
-    <h2>Contact Kristie's Hub</h2>
+
+    <div class="section-title">
+      <h2>Contact Kristie's Hub</h2>
+      <p>Ready to order or book an appointment?</p>
+    </div>
 
     <p>📍 Lafia, Nasarawa</p>
+
     <p>📞 +234 816 914 2311</p>
 
     <a
-      class="whatsapp"
-      href="https://wa.me/2348169142311"
+      class="button"
+      href="https://wa.me/2348169142311?text=Hello%20Kristie's%20Hub,%20I%20would%20like%20to%20make%20an%20order."
       target="_blank">
       💬 Order / Book on WhatsApp
     </a>
+
   </section>
 
+
+  <!-- FOOTER -->
   <footer>
     © 2026 Kristie's Hub. All Rights Reserved.
   </footer>
 
 </body>
 </html>
-<!-- KRISTIE'S HUB PRODUCTS -->
-<section style="padding:50px 20px; background:#fff; text-align:center;">
-  <h2 style="font-size:32px; margin-bottom:10px;">Shop Kristie's Hub</h2>
-  <p style="color:#777; margin-bottom:30px;">
-    Fashion, accessories & more
-  </p>
-
-  <div style="
-    max-width:420px;
-    margin:auto;
-    background:#fff;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 8px 30px rgba(0,0,0,0.12);
-  ">
-
-    <img
-      src="file_000000003d8c8210a7241322a759242f.png"
-      alt="Kristie's Hub Fashion"
-      style="
-        width:100%;
-        height:420px;
-        object-fit:cover;
-        display:block;
-      "
-    >
-
-    <div style="padding:22px;">
-      <h3 style="font-size:24px; margin:0 0 10px;">
-        Latest Collection
-      </h3>
-
-      <p style="color:#666; line-height:1.6;">
-        Discover stylish clothing and accessories from Kristie's Hub.
-      </p>
-
-      <a
-        href="https://wa.me/+234 816 914 2311"
-        style="
-          display:inline-block;
-          margin-top:15px;
-          padding:14px 28px;
-          background:#111;
-          color:white;
-          text-decoration:none;
-          border-radius:30px;
-          font-weight:bold;
-        "
-      >
-        Order on WhatsApp
-      </a>
-    </div>
-  </div>
-</section>
